@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import hexlet.code.schema.NumberSchema;
 import hexlet.code.schema.StringSchema;
 import lombok.NoArgsConstructor;
 
@@ -8,5 +9,9 @@ public class Validator {
 
     public StringSchema string() {
         return new StringSchema();
+    }
+
+    public NumberSchema number() {
+        return new NumberSchema();
     }
 }
