@@ -21,22 +21,18 @@ jobs:
         #SetupGradle  
       - uses: gradle/actions/setup-gradle@v3
         with:
-          build-root-directory: app
           gradle-version: 8.7
 
         #CheckstyleMain
       - name: Gradle checkstyleMain
-        working-directory: app
         run: ./gradlew checkstyleMain
         
         #CheckstyleTest
       - name: Gradle checkstyleTest
-        working-directory: app
         run: ./gradlew checkstyleTest
 
         #GradleTest
       - name: Gradle test
-        working-directory: app
         run: ./gradlew test
 
         #SendCodeCoverageToCodeClimate
