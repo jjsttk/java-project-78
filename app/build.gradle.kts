@@ -2,7 +2,6 @@ plugins {
     application
     checkstyle
     jacoco
-    id("io.freefair.lombok") version "8.11"
 }
 
 group = "hexlet.code"
@@ -13,11 +12,16 @@ repositories {
 }
 
 dependencies {
+    // tests
     testImplementation(platform("org.junit:junit-bom:5.10.3"))
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.3")
-    testImplementation ("org.junit.jupiter:junit-jupiter-api:5.10.3")
-    testRuntimeOnly ("org.junit.jupiter:junit-jupiter-engine:5.10.2")
+
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly ("org.projectlombok:lombok:1.18.34")
+    annotationProcessor ("org.projectlombok:lombok:1.18.34")
 }
+
+tasks.jacocoTestReport { reports { xml.required.set(true) } }
 
 tasks.test {
     useJUnitPlatform()
