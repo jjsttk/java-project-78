@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ValidatorMapSchemaTest {
+public final class ValidatorMapSchemaTest {
     private Validator v;
 
     @BeforeEach
