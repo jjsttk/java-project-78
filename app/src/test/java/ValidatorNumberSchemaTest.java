@@ -44,5 +44,6 @@ public class ValidatorNumberSchemaTest {
         assertTrue(schema.isValid(10)); // true
         assertFalse(schema.isValid(4)); // false
         assertFalse(schema.isValid(11)); // false
+        assertFalse(schema.isValid(-5)); // false
     }
 }
