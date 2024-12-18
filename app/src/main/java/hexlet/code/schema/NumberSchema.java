@@ -1,6 +1,6 @@
 package hexlet.code.schema;
 
-public class NumberSchema extends BaseSchema<Number> {
+public final class NumberSchema extends BaseSchema<Number> {
 
     public NumberSchema required() {
         addCheck("required", value -> value != null);
