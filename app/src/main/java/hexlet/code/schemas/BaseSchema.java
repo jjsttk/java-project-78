@@ -1,11 +1,11 @@
 package hexlet.code.schemas;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Predicate;
 
 public abstract class BaseSchema<T> {
-    private final Map<String, Predicate<T>> rules = new HashMap<>();
+    private final Map<String, Predicate<T>> rules = new LinkedHashMap<>();
 
     /**
      * Добавляет новое правило проверки.
